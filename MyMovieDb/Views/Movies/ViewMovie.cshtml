@@ -1,0 +1,35 @@
+﻿@model Movies
+
+<h3>@Model.title Information</h3>
+
+<table class="table">
+    <tr>
+        <th>Movie id</th>
+        <th>Title</th>
+        <th>Genre</th>
+        <th>Release year</th>
+        <th>Director</th>
+        
+    </tr>
+    <tr>
+        <td>@Model.movie_id</td>
+        <td>@Model.title</td>
+        <td>@Model.genre</td>
+        <td>@Model.release_year</td>
+        <td>@Model.director</td>
+        
+    </tr>
+</table>
+
+<div style="display: block">
+    <a href="/Movies/UpdateMovie/@Model.movie_id">Update this Movie</a>
+</div>
+
+<div style="display: block">
+
+    @using (Html.BeginForm("DeleteMovie", "Movies", "Post"))
+    {
+        <input type="hidden" asp-for="movie_id" value="@Model.movie_id" />
+        <input type="submit" onclick="return confirm('Are you sure?')" value="Delete this movie" />
+    }
+</div>

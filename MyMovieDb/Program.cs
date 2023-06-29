@@ -1,7 +1,19 @@
+using MySql.Data.MySqlClient;
+using System.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<IDbConnection>((s) =>
+{
+    IDbConnection conn = new MySqlConnection(builder.Configuration.GetConnectionString("movies_database"));
+    conn.Open();
+    return conn;
+});
+
+builder.Services.AddTransient<MyMovieDb.IMoviesRepository, MyMovieDb.MoviesRepository>();
 
 var app = builder.Build();
 
@@ -25,3 +37,5 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+
+// CRUD = create read update delete

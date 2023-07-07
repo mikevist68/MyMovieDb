@@ -1,9 +1,10 @@
-﻿@model Movies
-
+﻿<!--this is what will the view will expect to render  -->
+@model Movies
+<!-- this is used to access properties of the model and display them in the view.-->
 <h2>Update @Model.movie_id</h2>
-
+<!--this line starts a form.t specifies the action method (UpdateMovieToDatabase) and controller (Movies) to which the form data will be submitted. The "Post" argument indicates that the form should use the HTTP POST method.  -->
 @using (Html.BeginForm("UpdateMovieToDatabase", "Movies", "Post"))
-{
+{   // This line creates a hidden input field for the movie_id property of the model. The asp-for attribute binds the input field to the movie_id property, and the value attribute sets the initial value of the field to the value of Model.movie_id.
     <input asp-for="movie_id" type="hidden" value="@Model.movie_id" />
 
     <label asp-for="title" class="control-label">title</label>
@@ -19,4 +20,10 @@
     <input type="text" name="director" class="form-control" value="@Model.director" />
 
     <input type="submit" value="Update Movies" class="btn btn-primary" />
+
+    
 }
+<!--This line creates a label element for the title property of the model. The asp-for attribute associates the label with the title property for accessibility purposes.-->
+<!--<input type="text" name="title" class="form-control" value="@Model.title" />: This line creates an input field of type text for the title property of the model. The name attribute specifies the name of the field, the class attribute assigns a CSS class to the field for styling purposes, and the value attribute sets the initial value of the field to the value of Model.title.-->
+
+<!--The overall purpose of this code is to generate an HTML form for updating movie information. The form is pre-populated with the values of the Movies object (Model), and when the form is submitted, it will be sent to the UpdateMovieToDatabase action method in the Movies controller for further processing.-->

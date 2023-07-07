@@ -1,18 +1,82 @@
 html {
-  font-size: 14px;
+    font-size: 16px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
+}
+
+html {
+    background-image: url("../images/movie1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+table {
+    background-color: #00e6ac;
+    font-size: 18px;
+    text-decoration-color: white;
+    border-radius: 25px;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 60px;
+    font-family: 'Caprasimo', cursive;
+    font-family: 'Crimson Pro', serif;
 }
 
 body {
-  margin-bottom: 60px;
+    background-color: #5c0099;
 }
+
+footer {
+    background-color: #5c0099;
+}
+
+p {
+    font-size: 16px;
+    color: white;
+}
+
+h1 {
+    color: white;
+    font-family: 'Caprasimo', cursive;
+    font-family: 'Crimson Pro', serif;
+}
+tr {
+    text-decoration-color: grey;
+}
+th {
+    /*color: purple;*/
+    font-family: 'Caprasimo', cursive;
+    font-family: 'Crimson Pro', serif;
+    
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: red;
+}
+
+.control-label {
+    text-decoration-color: white;
+}
+
+label {
+    color:white;
+}
+
+/*this is were i can style my page */

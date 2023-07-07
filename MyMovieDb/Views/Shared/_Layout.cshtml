@@ -1,13 +1,25 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - MyMovieDb</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/MyMovieDb.styles.css" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Crimson+Pro:wght@200&display=swap" rel="stylesheet">
 </head>
+@*<style>
+    body {
+        background-image:url("~/images/movie1.jpg");
+
+    }
+
+    
+</style>*@
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
@@ -47,3 +59,22 @@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+
+<!--the head section isnt seen buy the on the web page it contains meta tags.-->
+@*viewport configurations and the page title.
+it also refrences css files and frameworks 
+it has a custom css files site.css and MyMovieDb.styles.css*@
+
+@*the body contains what you see on the webpage. *@
+
+@*The <div class="container">
+    element is used to wrap the main content area of the page.
+The <footer>
+element represents the footer section of the page. It contains copyright information and a link to the privacy policy.
+Several JavaScript files are included at the bottom of the page for functionality: jQuery, Bootstrap bundle, and a custom JavaScript file
+
+*@
+
+<!--This html template sets up the structure of the webpage including the 
+the nav bar, main content and footer. It also includes references to CSS and JavaScript files for styling and interactivity.
+-->
